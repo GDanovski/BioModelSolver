@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{906C56C9-7792-4D41-92F6-73DD0AC1E94C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Radial_BandUnB_noP_phosph</RootNamespace>
+    <AssemblyName>Radial_BandUnB_noP_phosph</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\ODESolver\ODESolver\bin\Debug\Models\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\..\..\ODESolver\ODESolver\bin\Debug\Models\Radial_BandUnB_noP_phosph.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\ODESolver\ODESolver\bin\Release\Models\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="source\common\BitMapEditor.cs" />
+    <Compile Include="source\common\ModelCellTool.cs" />
+    <Compile Include="source\common\M_Profile_Form.cs" />
+    <Compile Include="source\common\RoiMeasure.cs" />
+    <Compile Include="source\common\SolverInterface.cs" />
+    <Compile Include="source\FRAP_ATM\DiffusionSolver.cs" />
+    <Compile Include="source\FRAP_ATM\IntegrationMethod.cs" />
+    <Compile Include="source\FRAP_ATM\LaplacianMethod.cs" />
+    <Compile Include="source\FRAP_ATM\Storage.cs" />
+    <Compile Include="source\FRAP_MDC\DiffusionSolver.cs" />
+    <Compile Include="source\FRAP_MDC\IntegrationMethod.cs" />
+    <Compile Include="source\FRAP_MDC\LaplacianMethod.cs" />
+    <Compile Include="source\FRAP_MDC\ReactionFunction.cs" />
+    <Compile Include="source\FRAP_MDC\Storage.cs" />
+    <Compile Include="source\MP\DiffusionSolver.cs" />
+    <Compile Include="source\MP\IntegrationMethod.cs" />
+    <Compile Include="source\MP\LaplacianMethod.cs" />
+    <Compile Include="source\common\ProgressBar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="source\common\ProgressBar.Designer.cs" />
+    <Compile Include="source\MP\ReactionFunction.cs" />
+    <Compile Include="source\MP\Storage.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\ODEModel\ODEModel\BioModel.csproj">
+      <Project>{2c7f17f5-91e9-4a83-8b2e-2250405de35e}</Project>
+      <Name>BioModel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="source\common\ProgressBar.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="source\info.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
