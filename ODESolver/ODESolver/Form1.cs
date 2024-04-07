@@ -88,6 +88,14 @@ namespace ODESolver
 
                 LoadChart();
             });
+
+            if (!this.core.DebugMode)
+            {
+                textBox_StDevScale.Visible = false;
+                label8.Visible = false;
+                button_Solve.Visible = false;
+                button_Stop.Visible = false;
+            }
             //Set autosave timer
             SetTimer();
         }

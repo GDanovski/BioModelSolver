@@ -35,6 +35,7 @@ namespace ODESolver
         };
 
         private string _ExeDir;
+        private bool _DebugMode = false;
         private Dictionary<string, ODEModel.Model> _Models;
         
         /// <summary>
@@ -53,6 +54,15 @@ namespace ODESolver
             get { return _Models; }
             set { _Models = value; }
         }
+        /// <summary>
+        /// Shows if the software is in debug mode
+        /// </summary>
+        public bool DebugMode
+        {
+            get { return _DebugMode; }
+            set { _DebugMode = value; }
+        }
+
         /// <summary>
         /// Initialize ODEsolver core and load the models
         /// </summary>
@@ -80,6 +90,7 @@ namespace ODESolver
             DirectoryInfo directoryInfo = new DirectoryInfo(dir);
             // Check if not released models should be loaded.
             bool loadUnreleasedModels = File.Exists(dir + "\\debug.txt");
+            this.DebugMode = loadUnreleasedModels;
             //search for models in the directory and load them to the models dictionary
             foreach (var file in directoryInfo.GetFiles())
 
