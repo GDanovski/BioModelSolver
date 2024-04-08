@@ -22,13 +22,13 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <InstallUrl>https://dnarepair.bas.bg/software/CellTool/BioModelSolver/</InstallUrl>
-    <UpdateUrl>https://dnarepair.bas.bg/software/CellTool/BioModelSolver/</UpdateUrl>
+    <InstallUrl>https://dnarepair.bas.bg/software/BioModelSolver/</InstallUrl>
+    <UpdateUrl>https://dnarepair.bas.bg/software/BioModelSolver/</UpdateUrl>
     <ProductName>BioModelSolver</ProductName>
     <PublisherName>Georgi Danovski</PublisherName>
     <SuiteName>BioModelSolver</SuiteName>
-    <ApplicationRevision>3</ApplicationRevision>
-    <ApplicationVersion>1.0.2.3</ApplicationVersion>
+    <ApplicationRevision>4</ApplicationRevision>
+    <ApplicationVersion>1.0.2.4</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <PublishWizardCompleted>true</PublishWizardCompleted>
